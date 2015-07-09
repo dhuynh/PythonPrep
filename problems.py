@@ -99,5 +99,34 @@ def mostCommonChar(str):
 
 	return k[v.index(max(v))]
 
+def sumR(numList):
+	if len(numList) == 1:
+		return numList[0]
+	else:
+		return numList[0] + sumR(numList[1:])
+
+def reverse(s):
+	if s == '':
+		return s
+	else:
+		return reverse(s[1:]) + s[0]
+
+def palinDrome(s):
+	print s[1:-1]
+	if s == ''.join(reversed(s)):
+		return True
+	else:
+		return False
+
+def palinDromeR(s):
+	if len(s) < 2:
+		return True
+	elif s[0] != s[-1]:
+		return False
+	else:
+		return palinDromeR[1:-1]
+
+
+
 
 
